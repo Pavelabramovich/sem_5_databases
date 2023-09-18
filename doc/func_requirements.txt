@@ -1,0 +1,14 @@
+User roles
+
+User
+add reviews, add books to own cart
+
+Provider
+CRUD own products list (products that he/she provided)
+
+Admin
+Can change all
+
+
+User authorization
+Logging of user actions

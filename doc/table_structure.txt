@@ -1,0 +1,75 @@
+(OTM O_Coupon, M_User)
+(OTM O_User, M_Order)
+(OTM O_User, M_Review)
+(OTO Provider)
+(OTO Employee)
+(OTO Cart)
+User:
++ Id:           INT        <pk> 
++ Login:        varchar
++ Password:     varchar
++ Name:         varchar
++ CouponId:                <fk>
+
+
+(OTO User)
+(OTM O_Cart, M_Book)
+Cart:
++ Id:           INT        <pk>
++ UserId                   <fk>     
+
+
+(OTO User)
+(MTM Book)
+Provider:
++ UserId        INT        <pk>, <fk>
+
+
+(OTO User)
+Employee:
++ UserId        INT        <pk>, <fk>
+
+
+(OTM O_Coupon, M_User)
+Coupon:
++ Id:           INT        <pk> 
++ Discount:     INT        
+
+
+(OTM O_Category, M_Book)
+(OTM O_Cart, M_Book)
+(OTM O_Author, M_Book)
+(OTM O_Book, M_Order)
+(OTM O_Book, M_Review)
+(MTM Provider)
+Book:
++ Id:           INT        <pk> 
++ Title:        varchar
++ AuthorId:                <fk>
++ CategoryId:              <fk>
+
+
+(OTM O_Book, M_Order)
+(OTM O_User, M_Order)
+Order:
++ Id:           INT        <pk> 
++ Count:        INT
++ BookId:                  <fk>
++ UserId:                  <fk>
+
+
+
+(OTM O_Book, M_Review)
+(OTM O_User, M_Review)
+Order:
++ Id:           INT        <pk> 
++ Title:        varchar
++ Text:         text          
++ BookId:                  <fk>
++ UserId:                  <fk>
+
+
+
+
+
+

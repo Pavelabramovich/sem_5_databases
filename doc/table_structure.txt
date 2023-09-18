@@ -1,59 +1,61 @@
-(OTM O_Coupon, M_User)
+(MTM Coupon)
 (OTM O_User, M_Order)
 (OTM O_User, M_Review)
+(OTM O_Role, M_User)
 (OTO Provider)
-(OTO Employee)
 (OTO Cart)
 User:
-+ Id:           INT        <pk> 
++ Id:           int        <pk> 
 + Login:        varchar
 + Password:     varchar
 + Name:         varchar
-+ CouponId:                <fk>
++ RoleId:                  <fk>
 
 
+(OTM O_Role, M_User)
+Role:
++ Id            int        <pk>
++ Name:         varchar
+
+
+(MTM Book)
 (OTO User)
-(OTM O_Cart, M_Book)
 Cart:
-+ Id:           INT        <pk>
++ Id:           int        <pk>
 + UserId                   <fk>     
 
 
 (OTO User)
 (MTM Book)
 Provider:
-+ UserId        INT        <pk>, <fk>
++ UserId        int        <pk>, <fk>
 
 
-(OTO User)
-Employee:
-+ UserId        INT        <pk>, <fk>
 
-
-(OTM O_Coupon, M_User)
+(MTM User)
 Coupon:
-+ Id:           INT        <pk> 
-+ Discount:     INT        
++ Id:           int        <pk> 
++ Discount:     number(2)        
 
 
-(OTM O_Category, M_Book)
-(OTM O_Cart, M_Book)
 (OTM O_Author, M_Book)
-(OTM O_Book, M_Order)
 (OTM O_Book, M_Review)
 (MTM Provider)
+(MTM Category)
+(MTM Cart)
+(MTM Order)
 Book:
-+ Id:           INT        <pk> 
++ Id:           int        <pk> 
 + Title:        varchar
 + AuthorId:                <fk>
 + CategoryId:              <fk>
 
 
-(OTM O_Book, M_Order)
 (OTM O_User, M_Order)
+(MTM Book)
 Order:
-+ Id:           INT        <pk> 
-+ Count:        INT
++ Id:           int        <pk> 
++ Count:        number
 + BookId:                  <fk>
 + UserId:                  <fk>
 
@@ -61,10 +63,10 @@ Order:
 
 (OTM O_Book, M_Review)
 (OTM O_User, M_Review)
-Order:
-+ Id:           INT        <pk> 
+Review:
++ Id:           int        <pk> 
 + Title:        varchar
-+ Text:         text          
++ Text:         varchar          
 + BookId:                  <fk>
 + UserId:                  <fk>
 

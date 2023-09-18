@@ -1,13 +1,14 @@
 User roles
 
 User
-add reviews, add books to own cart
+add reviews, add books to own cart choosing a rovider and crate order from products inside his/her cart
 
 Provider
-CRUD own products list (products that he/she provided)
+CRUD own products list (books that he/she provided)
 
 Admin
-Can change all
+CRUD books, users, orders, reviews, categories and authors, can add coupons to users
+that add discount to all buys
 
 
 User authorization

@@ -1,7 +1,7 @@
 User roles
 
 User
-add reviews, add books to own cart choosing a rovider and crate order from products inside his/her cart
+add reviews to book, add books to own cart choosing a provider and crate order from products inside his/her cart
 
 Provider
 CRUD own products list (books that he/she provided)

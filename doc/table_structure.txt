@@ -1,82 +1,82 @@
 User:
-+ Id:           int        <pk> 
-+ Login:        varchar
-+ Password:     varchar
-+ Name:         varchar
-+ RoleId:                  <fk -> Role>
++ Id:           int           <pk> 
++ Login:        varchar(64)
++ Password:     varchar(64)
++ Name:         varchar(64)
++ RoleId:                     <fk -> Role>
 
 
 Role:
-+ Id            int        <pk>
-+ Name:         varchar
++ Id            int           <pk>
++ Name:         varchar(64)
 
 
 Cart:
-+ Id:           int        <pk>
-+ UserId                   <fk -> User>     
++ Id:           int           <pk>
++ UserId                      <fk -> User>     
 
 
 Provider:
-+ UserId        int        <pk> & <fk -> User>
++ UserPtr                     <pk> & <fk -> User>
 
 
 
 Coupon:
-+ Id:           int        <pk> 
++ Id:           int           <pk> 
 + Discount:     number(2)        
 
 
 Book:
-+ Id:           int        <pk> 
-+ Title:        varchar
-+ AuthorId:                <fk -> Author>
-+ CategoryId:              <fk -> Category>
++ Id:           int           <pk> 
++ Title:        varchar(64)
++ AuthorId:                   <fk -> Author>
++ CategoryId:                 <fk -> Category>
 
 
 Order:
-+ Id:           int        <pk> 
++ Id:           int           <pk> 
 + Count:        number
-+ BookId:                  <fk -> Book>
-+ UserId:                  <fk -> User>
++ BookId:                     <fk -> Book>
++ UserId:                     <fk -> User>
 
 
 
 Review:
-+ Id:           int        <pk> 
++ Id:           int           <pk> 
 + Title:        varchar
 + Text:         varchar          
-+ BookId:                  <fk -> Book>
-+ UserId:                  <fk -> User>
++ BookId:                     <fk -> Book>
++ UserId:                     <fk -> User>
 
 
 CouponUser:
-+ Id:           int        <pk> 
-+ CouponId:                <fk -> Coupon>
-+ UserId:                  <fk -> User>
++ Id:           int           <pk> 
++ CouponId:                   <fk -> Coupon>
++ UserId:                     <fk -> User>
 
 
 ProviderBook:
-+ Id:           int        <pk> 
-+ ProviderId:              <fk -> Provider>
-+ BookId:                  <fk -> Book>
++ Id:           int           <pk> 
++ ProviderId:                 <fk -> Provider>
++ BookId:                     <fk -> Book>
 
 
 OrderBook:
-+ Id:           int        <pk> 
-+ OrderId:                 <fk -> Order>
-+ BookId:                  <fk -> Book>
++ Id:           int           <pk> 
++ OrderId:                    <fk -> Order>
++ BookId:                     <fk -> Book>
 
 
 CategoryBook:
-+ Id:           int        <pk> 
-+ CategoryId:              <fk -> Category>
-+ BookId:                  <fk -> Book>
++ Id:           int           <pk> 
++ CategoryId:                 <fk -> Category>
++ BookId:                     <fk -> Book>
 
 
 CartBook:
-+ Id:           int        <pk> 
-+ CartId:                  <fk -> Cart>
-+ BookId:                  <fk -> Book>
++ Id:           int           <pk> 
++ CartId:                     <fk -> Cart>
++ BookId:                     <fk -> Book>
 
 
 

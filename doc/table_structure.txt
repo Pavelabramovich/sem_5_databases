@@ -35,7 +35,6 @@ Book:
 + Id:           int           <pk> 
 + Title:        varchar(64)
 + AuthorId:                   <fk -> Author>
-+ CategoryId:                 <fk -> Category>
 
 
 Author:
@@ -45,8 +44,6 @@ Author:
 
 Order:
 + Id:           int           <pk> 
-+ Count:        number
-+ BookId:                     <fk -> Book>
 + UserId:                     <fk -> User>
 
 
@@ -68,6 +65,7 @@ OrderBook:
 + Id:           int           <pk> 
 + OrderId:                    <fk -> Order>
 + BookId:                     <fk -> Book>
++ Count:        int
 
 
 CategoryBook:

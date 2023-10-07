@@ -4,6 +4,7 @@ User:
 + Password:     varchar(64)
 + Name:         varchar(64)
 + RoleId:                     <fk -> Role>
++ CouponId:                   <fk -> Coupon>
 
 
 Role:
@@ -20,10 +21,14 @@ Provider:
 + UserPtr                     <pk> & <fk -> User>
 
 
-
 Coupon:
 + Id:           int           <pk> 
 + Discount:     number(2)        
+
+
+Category:
++ Id:           int           <pk> 
++ Name:         varchar(64)      
 
 
 Book:
@@ -33,6 +38,11 @@ Book:
 + CategoryId:                 <fk -> Category>
 
 
+Author:
++ Id            int           <pk>
++ Name:         varchar(64)
+
+
 Order:
 + Id:           int           <pk> 
 + Count:        number
@@ -40,18 +50,11 @@ Order:
 + UserId:                     <fk -> User>
 
 
-
 Review:
 + Id:           int           <pk> 
 + Title:        varchar
 + Text:         varchar          
 + BookId:                     <fk -> Book>
-+ UserId:                     <fk -> User>
-
-
-CouponUser:
-+ Id:           int           <pk> 
-+ CouponId:                   <fk -> Coupon>
 + UserId:                     <fk -> User>
 
 

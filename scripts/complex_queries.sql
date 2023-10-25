@@ -235,4 +235,14 @@ SELECT b.Id,
                     FROM OrdersBooks ob 
                 GROUP BY ob.BookId) AS bto
               ON bto.book_id = b.Id;
+              
+
+--Select books with max price of it's author book.
+SELECT b.Id, 
+       b.Title, 
+       a.Name AS author_name,
+       MAX(b.Price) OVER (PARTITION BY b.AuthorId) AS max_price_of_author
+       
+  FROM Books b
+       JOIN Authors a ON b.AuthorId = a.Id;
             

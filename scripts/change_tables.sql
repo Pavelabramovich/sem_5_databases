@@ -1,4 +1,4 @@
-INSERT INTO Users (Name, Login, Password, RoleId)
-SELECT a.Name, a.Name, "pass1pass", 1
-FROM Authors a
-WHERE EXISTS(SELECT * FROM Books b WHERE a.Id = b.AuthorId);
+INSERT INTO users (name, login, password, role_id)
+SELECT a.name, a.name, "pass1pass", 1
+FROM authors a
+WHERE EXISTS(SELECT * FROM books b WHERE a.id = b.author_id);

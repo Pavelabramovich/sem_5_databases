@@ -1,75 +1,75 @@
-INSERT INTO Coupons (Discount) VALUES 
+INSERT INTO coupons (discount) VALUES
 (10.5), 
 (11.8), 
 (20.1);
 
 
-INSERT INTO Roles (Name) VALUES
-("Customer"),
-("Admin");
+INSERT INTO roles (name) VALUES
+('Customer'),
+('Admin');
 
 
-INSERT INTO Authors (Name) VALUES
-("Alex Maliarniy"),
-("Kriss Whell"),
-("Pavel Umnov"),
-("Stella Jhonson");
+INSERT INTO authors (name) VALUES
+('Alex Maliarniy'),
+('Kriss Whell'),
+('Pavel Umnov'),
+('Stella Jhonson');
 
 
-INSERT INTO Users (Login, Password, Name, RoleId, CouponId) VALUES
-("Log1", "Pass1", "Jhon", 1, NULL),
-("Log2", "Pass2", "Peter", 1, 2),
-("Log3", "Pass3", "Bob", 1, 1),
-("Log4", "Pass4", "Tom", 1, 2),
-("Log5", "Pass5", "SuperAdmin", 2, NULL);
+INSERT INTO users (login, password, name, role_id, coupon_id) VALUES
+('Log1', 'Pass1', 'Jhon', 1, NULL),
+('Log2', 'Pass2', 'Peter', 1, 2),
+('Log3', 'Pass3', 'Bob', 1, 1),
+('Log4', 'Pass4', 'Tom', 1, 2),
+('Log5', 'Pass5', 'SuperAdmin', 2, NULL);
 
 
-INSERT INTO Providers (UserPtr) VALUES
+INSERT INTO providers (user_ptr_id) VALUES
 (3),
 (4);
 
 
-INSERT INTO Categories (Name) VALUES
-("Detective"),
-("Sci-fi"),
-("Western"),
-("Fairy tale");
+INSERT INTO categories (name) VALUES
+('Detective'),
+('Sci-fi'),
+('Western'),
+('Fairy tale');
 
 
-INSERT INTO Books (Title, AuthorId) VALUES
-("When pigs fly", 2),
-("Crumpled Fairy", 1),
-("Forgotten", 3),
-("Fall night", 2),
-("First of Mahikans", 3);
+INSERT INTO books (title, author_id, price) VALUES
+('When pigs fly', 2, 120),
+('Crumpled Fairy', 1, 150),
+('Forgotten', 3, 90),
+('Fall night', 2, 200),
+('First of Mahikans', 3, 150);
 
 
-INSERT INTO Reviews (Text, BookId, UserId) VALUES
-("I like it. The best of the  best.", 2, 1),
-("0 from 10.", 3, 2),
-("Nothing", 3, 3);
+INSERT INTO reviews (text, book_id, user_id) VALUES
+('I like it. The best of the  best.', 2, 1),
+('0 from 10.', 3, 2),
+('Nothing', 3, 3);
 
 
-INSERT INTO Orders (UserId) VALUES
+INSERT INTO orders (user_id) VALUES
 (1),
 (2),
 (3);
 
 
-INSERT INTO Carts (UserId) VALUES
+INSERT INTO carts (user_id) VALUES
 (1),
 (2),
 (3),
 (5);
 
 
-INSERT INTO CartsBooks (CartId, BookId) VALUES
+INSERT INTO carts_books (cart_id, book_id) VALUES
 (1, 1), (1, 3), (1, 4),
 (2, 1), (2, 5),
 (3, 2), (3, 4);
 
 
-INSERT INTO BooksCategories (BookId, CategoryId) VALUES
+INSERT INTO books_categories (book_id, category_id) VALUES
 (1, 4), (1, 1),
 (2, 4),
 (3, 2), (3, 3),
@@ -77,15 +77,12 @@ INSERT INTO BooksCategories (BookId, CategoryId) VALUES
 (5, 3);
 
 
-INSERT INTO OrdersBooks (OrderId, BookId) VALUES
+INSERT INTO orders_books (order_id, book_id) VALUES
 (1, 1), (1, 3),
 (2, 4), (2, 5),
 (3, 2), (3, 3), (3, 4);
 
 
-INSERT INTO ProvidersBooks (ProviderId, BookId) VALUES
+INSERT INTO providers_books (provider_id, Book_id) VALUES
 (3, 1), (3, 4), (3, 5),
 (4, 2), (4, 3), (4, 4), (4, 5);
-
-
-

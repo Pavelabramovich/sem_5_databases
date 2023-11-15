@@ -44,9 +44,3 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-
-CREATE TRIGGER add_to_another_table
-	AFTER INSERT ON users
-	FOR EACH ROW
-	EXECUTE FUNCTION add_user_cart_if_not_exists();
-
